@@ -1,0 +1,110 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tính 2 số"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <!-- Ô nhập số thứ nhất -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số thứ nhất" />
+
+    <EditText
+        android:id="@+id/sothunhat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Nhập số thứ nhất" />
+
+    <!-- Ô nhập số thứ hai -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số thứ hai" />
+
+    <EditText
+        android:id="@+id/sothuhai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Nhập số thứ hai" />
+
+    <!-- Hàng ngang chứa các nút tính toán -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnCong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cộng"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnTru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trừ"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Hàng ngang chứa nút Nhân và Chia -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnNhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhân"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnChia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chia"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Hiển thị kết quả -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kết quả"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/ketqua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:enabled="false"
+        android:hint="Kết quả sẽ hiển thị tại đây" />
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xóa"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="#FF0000"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

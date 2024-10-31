@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".facebook.Dangky">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tạo tài khoản mới"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- First Name -->
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Tên"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Last Name -->
+    <EditText
+        android:id="@+id/lastName1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Họ"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/firstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Email or Phone -->
+    <EditText
+        android:id="@+id/emailOrPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email hoặc số điện thoại"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/lastName1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/passwordnew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/emailOrPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Date of Birth -->
+    <TextView
+        android:id="@+id/dobLabell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày sinh"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/passwordnew"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Date of Birth Picker -->
+    <EditText
+        android:id="@+id/dateOfBirth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="DD/MM/YYYY"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/dobLabell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Gender -->
+    <TextView
+        android:id="@+id/genderLabell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giới tính "
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/dateOfBirth"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Gender Selection -->
+    <RadioGroup
+        android:id="@+id/genderGroupp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/genderLabell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👦"/>
+
+        <RadioButton
+            android:id="@+id/femalee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👩" />
+
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❌"/>
+    </RadioGroup>
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/genderGroupp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
